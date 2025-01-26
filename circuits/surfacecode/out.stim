@@ -1,0 +1,1821 @@
+# Qubit Coordinates
+QUBIT_COORDS(0, 0) 0 # data qubit
+QUBIT_COORDS(0, 1) 5 # measure x qubit
+QUBIT_COORDS(0, 2) 10 # data qubit
+QUBIT_COORDS(0, 3) 15 # measure x qubit
+QUBIT_COORDS(0, 4) 20 # data qubit
+QUBIT_COORDS(1, 0) 1 # measure z qubit
+QUBIT_COORDS(1, 1) 6 # data qubit
+QUBIT_COORDS(1, 2) 11 # measure z qubit
+QUBIT_COORDS(1, 3) 16 # data qubit
+QUBIT_COORDS(1, 4) 21 # measure z qubit
+QUBIT_COORDS(2, 0) 2 # data qubit
+QUBIT_COORDS(2, 1) 7 # measure x qubit
+QUBIT_COORDS(2, 2) 12 # data qubit
+QUBIT_COORDS(2, 3) 17 # measure x qubit
+QUBIT_COORDS(2, 4) 22 # data qubit
+QUBIT_COORDS(3, 0) 3 # measure z qubit
+QUBIT_COORDS(3, 1) 8 # data qubit
+QUBIT_COORDS(3, 2) 13 # measure z qubit
+QUBIT_COORDS(3, 3) 18 # data qubit
+QUBIT_COORDS(3, 4) 23 # measure z qubit
+QUBIT_COORDS(4, 0) 4 # data qubit
+QUBIT_COORDS(4, 1) 9 # measure x qubit
+QUBIT_COORDS(4, 2) 14 # data qubit
+QUBIT_COORDS(4, 3) 19 # measure x qubit
+QUBIT_COORDS(4, 4) 24 # data qubit
+# Initial Reset
+R 0
+R 5
+R 10
+R 15
+R 20
+R 1
+R 6
+R 11
+R 16
+R 21
+R 2
+R 7
+R 12
+R 17
+R 22
+R 3
+R 8
+R 13
+R 18
+R 23
+R 4
+R 9
+R 14
+R 19
+R 24
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 0
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] 
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] 
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] 
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] 
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] 
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] 
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] 
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] 
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] 
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] 
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] 
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] 
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 1
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+MZ 0
+MZ 10
+MZ 20
+MZ 6
+MZ 16
+MZ 2
+MZ 12
+MZ 22
+MZ 8
+MZ 18
+MZ 4
+MZ 14
+MZ 24
+OBSERVABLE_INCLUDE(0) rec[-13] rec[-12] rec[-11] rec[-10] rec[-9] rec[-8] rec[-7] rec[-6] rec[-5] rec[-4] rec[-3] rec[-2] rec[-1]
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 2
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-26]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-26]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-26]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-26]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-26]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-26]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-26]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-26]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-26]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-26]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-26]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-26]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 3
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+X 10
+X 12
+X 14
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 4
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 5
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+MZ 0
+MZ 10
+MZ 20
+MZ 6
+MZ 16
+MZ 2
+MZ 12
+MZ 22
+MZ 8
+MZ 18
+MZ 4
+MZ 14
+MZ 24
+OBSERVABLE_INCLUDE(1) rec[-13] rec[-12] rec[-11] rec[-10] rec[-9] rec[-8] rec[-7] rec[-6] rec[-5] rec[-4] rec[-3] rec[-2] rec[-1]
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 6
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-26]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-26]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-26]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-26]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-26]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-26]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-26]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-26]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-26]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-26]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-26]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-26]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 7
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+X 10
+X 12
+X 14
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 8
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 9
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+MZ 0
+MZ 10
+MZ 20
+MZ 6
+MZ 16
+MZ 2
+MZ 12
+MZ 22
+MZ 8
+MZ 18
+MZ 4
+MZ 14
+MZ 24
+OBSERVABLE_INCLUDE(2) rec[-13] rec[-12] rec[-11] rec[-10] rec[-9] rec[-8] rec[-7] rec[-6] rec[-5] rec[-4] rec[-3] rec[-2] rec[-1]
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 10
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-26]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-26]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-26]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-26]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-26]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-26]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-26]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-26]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-26]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-26]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-26]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-26]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 11
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+X 10
+X 12
+X 14
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 12
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 13
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+X 10
+X 12
+X 14
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 14
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 15
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-13]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-13]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-13]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-13]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-13]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-13]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-13]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-13]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-13]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-13]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-13]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-13]
+TICK
+MZ 0
+MZ 10
+MZ 20
+MZ 6
+MZ 16
+MZ 2
+MZ 12
+MZ 22
+MZ 8
+MZ 18
+MZ 4
+MZ 14
+MZ 24
+OBSERVABLE_INCLUDE(3) rec[-13] rec[-12] rec[-11] rec[-10] rec[-9] rec[-8] rec[-7] rec[-6] rec[-5] rec[-4] rec[-3] rec[-2] rec[-1]
+TICK
+# ------------------------------------------------------------------------------
+# Starting Stabilizer Cycle 16
+# ------------------------------------------------------------------------------
+R 5
+R 15
+R 7
+R 17
+R 9
+R 19
+TICK
+H 5
+H 15
+R 1
+R 11
+R 21
+H 7
+H 17
+R 3
+R 13
+R 23
+H 9
+H 19
+TICK
+CX 5 0
+CX 15 10
+CX 6 11
+CX 16 21
+CX 7 2
+CX 17 12
+CX 8 13
+CX 18 23
+CX 9 4
+CX 19 14
+TICK
+CX 0 1
+CX 10 11
+CX 20 21
+CX 7 6
+CX 17 16
+CX 2 3
+CX 12 13
+CX 22 23
+CX 9 8
+CX 19 18
+TICK
+CX 5 6
+CX 15 16
+CX 2 1
+CX 12 11
+CX 22 21
+CX 7 8
+CX 17 18
+CX 4 3
+CX 14 13
+CX 24 23
+TICK
+CX 5 10
+CX 15 20
+CX 6 1
+CX 16 11
+CX 7 12
+CX 17 22
+CX 8 3
+CX 18 13
+CX 9 14
+CX 19 24
+TICK
+H 5
+H 15
+MRZ 1
+DETECTOR(1, 0, 0) rec[-1] rec[-26]
+MRZ 11
+DETECTOR(1, 2, 0) rec[-1] rec[-26]
+MRZ 21
+DETECTOR(1, 4, 0) rec[-1] rec[-26]
+H 7
+H 17
+MRZ 3
+DETECTOR(3, 0, 0) rec[-1] rec[-26]
+MRZ 13
+DETECTOR(3, 2, 0) rec[-1] rec[-26]
+MRZ 23
+DETECTOR(3, 4, 0) rec[-1] rec[-26]
+H 9
+H 19
+TICK
+MRX 5
+DETECTOR(0, 1, 0) rec[-1] rec[-26]
+MRX 15
+DETECTOR(0, 3, 0) rec[-1] rec[-26]
+MRX 7
+DETECTOR(2, 1, 0) rec[-1] rec[-26]
+MRX 17
+DETECTOR(2, 3, 0) rec[-1] rec[-26]
+MRX 9
+DETECTOR(4, 1, 0) rec[-1] rec[-26]
+MRX 19
+DETECTOR(4, 3, 0) rec[-1] rec[-26]
+TICK
